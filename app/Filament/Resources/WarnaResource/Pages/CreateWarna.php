@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\TipeResource\Pages;
+namespace App\Filament\Resources\WarnaResource\Pages;
 
-use App\Filament\Resources\TipeResource;
+use App\Filament\Resources\WarnaResource;
 use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
 
-class CreateTipe extends CreateRecord
+class CreateWarna extends CreateRecord
 {
-    protected static string $resource = TipeResource::class;
-
+    protected static string $resource = WarnaResource::class;
     protected function getRedirectUrl(): string
     {
         return $this->previousUrl ?? $this->getResource()::getUrl('index');

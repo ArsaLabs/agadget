@@ -1,20 +1,18 @@
 <?php
 
-namespace App\Filament\Resources\TipeResource\Pages;
+namespace App\Filament\Resources\RamResource\Pages;
 
-use App\Filament\Resources\TipeResource;
+use App\Filament\Resources\RamResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditTipe extends EditRecord
+class EditRam extends EditRecord
 {
-    protected static string $resource = TipeResource::class;
-
+    protected static string $resource = RamResource::class;
     protected function getRedirectUrl(): string
     {
-        return $this->previousUrl ?? $this->getResource()::getUrl('index');
+        return $this->getResource()::getUrl('index');
     }
-
     protected function getHeaderActions(): array
     {
         return [

@@ -40,6 +40,7 @@ class TipeResource extends Resource
                         ->maxLength(255),
                     TextInput::make('alias')
                         ->required()
+                        ->nullable()
                         ->maxLength(255),
                 ]),
             ]);
@@ -72,6 +73,8 @@ class TipeResource extends Resource
             //
         ];
     }
+
+    
 
     public static function getPages(): array
     {

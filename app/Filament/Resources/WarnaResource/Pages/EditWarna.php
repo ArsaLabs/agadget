@@ -1,20 +1,18 @@
 <?php
 
-namespace App\Filament\Resources\TipeResource\Pages;
+namespace App\Filament\Resources\WarnaResource\Pages;
 
-use App\Filament\Resources\TipeResource;
+use App\Filament\Resources\WarnaResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditTipe extends EditRecord
+class EditWarna extends EditRecord
 {
-    protected static string $resource = TipeResource::class;
-
+    protected static string $resource = WarnaResource::class;
     protected function getRedirectUrl(): string
     {
-        return $this->previousUrl ?? $this->getResource()::getUrl('index');
+        return $this->getResource()::getUrl('index');
     }
-
     protected function getHeaderActions(): array
     {
         return [
