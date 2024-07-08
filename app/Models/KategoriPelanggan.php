@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class KategoriPelanggan extends Model
 {
     use HasFactory;
-    protected $fillable = ['jenismember'];
+    protected $guarded = [];
+
+    function pelanggan()
+    {
+        return $this->hasOne(Pelanggan::class);
+    }
 }
